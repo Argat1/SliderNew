@@ -84,7 +84,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\desert-1654439_640.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SliderUproszczony\SliderUproszczony.csproj">
       <Project>{6B2A90CA-D38C-408B-A6DB-E14134195A90}</Project>
@@ -92,7 +94,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Kyoto.jpg" />
+    <AndroidResource Include="Resources\drawable\dino.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
