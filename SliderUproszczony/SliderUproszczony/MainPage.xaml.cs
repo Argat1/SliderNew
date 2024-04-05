@@ -18,11 +18,18 @@ namespace SliderUproszczony
 
             var img = new Images()
             {
-                ImageName = "Kyoto",
-                ImageSource = "Kyoto.jpg"
+                ImageName = "desert",
+                ImageSource = "desert.jpg"
             };
 
             _images.Add(img);
+            var img2 = new Images()
+            {
+                ImageName = "dino",
+                ImageSource = "dino.jpg"
+            };
+
+            _images.Add(img2);
 
             ChangeImages();
         }

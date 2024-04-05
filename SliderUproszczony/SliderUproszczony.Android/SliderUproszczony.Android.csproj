@@ -85,7 +85,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\desert-1654439_640.jpg" />
+    <AndroidResource Include="Resources\drawable\desert.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SliderUproszczony\SliderUproszczony.csproj">
