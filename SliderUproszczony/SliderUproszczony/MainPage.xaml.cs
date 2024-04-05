@@ -46,7 +46,7 @@ namespace SliderUproszczony
             imageCarousel.ItemsSource = _images;
         }
 
-        private void AddImage(object sender, EventArgs e)
+        private async void AddImage(object sender, EventArgs e)
         {
             string imageName = ImageNameEntry.Text;
             string imageSource = ImageSourceEntry.Text;
@@ -57,30 +57,40 @@ namespace SliderUproszczony
             }
             else
             {
-                var img = new Images()
+                bool answer = await DisplayAlert("Dodawanie", "Czy napewno chcesz dodać ten obraz", "Tak", "Nie");
+                if (answer == true)
                 {
-                    ImageName = imageName,
-                    ImageSource = imageSource
-                };
+                    var img = new Images()
+                    {
+                        ImageName = imageName,
+                        ImageSource = imageSource
+                    };
 
-                _images.Add(img);
-                LoadImages();
+                    _images.Add(img);
+                    LoadImages();
 
-                ImageNameEntry.Text = string.Empty;
-                ImageSourceEntry.Text = string.Empty;
+                    ImageNameEntry.Text = string.Empty;
+                    ImageSourceEntry.Text = string.Empty;
+                }
             }
         }
 
-        private void RemoveImage(object sender, EventArgs e)
+        private async void RemoveImage(object sender, EventArgs e)
         {
             var button = sender as Button;
             var image = (Images)button.BindingContext;
 
-            if (image != null)
+            bool answer = await DisplayAlert("Usuwanie", "Czy napewno chcesz usunac ten obraz", "Tak", "Nie");
+            if(answer == true)
             {
-                _images.Remove(image);
-                LoadImages();
+                if (image != null)
+                {
+                    _images.Remove(image);
+                    LoadImages();
+                }
             }
+
+            
         }
 
         private void OnToggleButtonClicked(object sender, EventArgs e)
